@@ -6,7 +6,7 @@ from pandas import DataFrame
 import sys
 import os
 # Add the parent directory to the Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from datasets.preprocess import preprocess
 
 def predict(entry):
@@ -29,7 +29,7 @@ def predict(entry):
         # score = processed_entry['Score']
         # helpfulness = processed_entry['Helpfulness']
 
-        vocab_file = Path(os.getcwd()).parent/'app/vocab.pickle'
+        vocab_file = Path(os.getcwd()).parent.parent/'models/vocab.pickle'
         with open(vocab_file, 'rb') as f:
             vocab = pickle.load(f)
 
