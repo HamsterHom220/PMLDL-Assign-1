@@ -29,7 +29,8 @@ def predict(entry):
         # score = processed_entry['Score']
         # helpfulness = processed_entry['Helpfulness']
 
-        with open('vocab.pickle', 'rb') as f:
+        vocab_file = Path(os.getcwd()).parent/'app/vocab.pickle'
+        with open(vocab_file, 'rb') as f:
             vocab = pickle.load(f)
 
             # Process the text to convert it into a tensor of token indices
