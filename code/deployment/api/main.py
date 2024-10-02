@@ -21,4 +21,4 @@ def read_item(title:str, text:str):
     return {"result": predict(DataFrame({'Title': [title], 'Helpfulness': helpfulness, 'Score': score, 'Text': [text]}))}
 
 if __name__ == "__main__":
-    uvicorn.run("main:app")
+    uvicorn.run("main:app",port=8000, host='0.0.0.0')

@@ -10,10 +10,10 @@ from sklearn.model_selection import train_test_split
 nltk.download('punkt_tab')
 nltk.download('stopwords')
 
-cur_dir = Path(os.getcwd())
-
-train_dataframe = pd.read_csv(cur_dir.parent.parent.parent/'data/raw/train.csv')
-test_dataframe = pd.read_csv(cur_dir.parent.parent.parent/'data/raw/test.csv')
+# cur_dir = Path(os.getcwd())
+#
+# train_dataframe = pd.read_csv(cur_dir.parent.parent.parent/'data/raw/train.csv')
+# test_dataframe = pd.read_csv(cur_dir.parent.parent.parent/'data/raw/test.csv')
 
 def preprocess_score_inplace(df):
     """
@@ -72,9 +72,9 @@ def encode_categories(df):
     df['Category'] = df['Category'].apply(lambda x: cat2idx[x])
     return df
 
-train_copy = train_dataframe.head().copy()
-
-encode_categories(preprocess_score_inplace(preprocess_helpfulness_inplace(concat_title_text_inplace(train_copy))))
+# train_copy = train_dataframe.head().copy()
+#
+# encode_categories(preprocess_score_inplace(preprocess_helpfulness_inplace(concat_title_text_inplace(train_copy))))
 
 
 def lower_text(text: str):
@@ -107,12 +107,12 @@ def stem_words(tokenized_text: list[str]) -> list[str]:
     stemmer = PorterStemmer()
     return [stemmer.stem(word) for word in tokenized_text]
 
-sample_text = train_copy['Text'][4]
-
-_lowered = lower_text(sample_text)
-_without_numbers = remove_numbers(_lowered)
-_without_punct = remove_punctuation(_without_numbers)
-_single_spaced = remove_multiple_spaces(_without_punct)
+# sample_text = train_copy['Text'][4]
+#
+# _lowered = lower_text(sample_text)
+# _without_numbers = remove_numbers(_lowered)
+# _without_punct = remove_punctuation(_without_numbers)
+# _single_spaced = remove_multiple_spaces(_without_punct)
 
 # print(sample_text)
 # print('-'*10)
@@ -156,11 +156,11 @@ def preprocess(df):
     return _cleaned
 
 
-ratio = 0.2
-train, val = train_test_split(
-    train_dataframe, stratify=train_dataframe['Category'], test_size=0.2, random_state=420
-)
-
-train.to_csv(cur_dir.parent.parent.parent/'data/processed/train.csv', index=False)
-val.to_csv(cur_dir.parent.parent.parent/'data/processed/val.csv', index=False)
-test_dataframe.to_csv(cur_dir.parent.parent.parent/'data/processed/test.csv', index=False)
+# ratio = 0.2
+# train, val = train_test_split(
+#     train_dataframe, stratify=train_dataframe['Category'], test_size=0.2, random_state=420
+# )
+#
+# train.to_csv(cur_dir.parent.parent.parent/'data/processed/train.csv', index=False)
+# val.to_csv(cur_dir.parent.parent.parent/'data/processed/val.csv', index=False)
+# test_dataframe.to_csv(cur_dir.parent.parent.parent/'data/processed/test.csv', index=False)

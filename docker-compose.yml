@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: code/deployment/api/Dockerfile
+    container_name: fastapi
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: code/deployment/app/Dockerfile
+    container_name: streamlit
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    depends_on:
+      - fastapi
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

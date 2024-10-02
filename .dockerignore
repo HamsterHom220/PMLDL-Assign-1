@@ -1,0 +1,6 @@
+data/
+.dvc/
+mlruns/
+notebooks/
+services/
+venv/

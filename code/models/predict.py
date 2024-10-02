@@ -20,7 +20,8 @@ def predict(entry):
                 print(f"Word '{word}' not in vocabulary, skipping.")
         return indices
 
-    model_file = Path(os.getcwd()).parent.parent.parent/'models/trained_model.pickle'
+    # model_file = Path(os.getcwd()).parent.parent.parent/'models/trained_model.pickle'
+    model_file = '/api/models/trained_model.pickle'
     device = 'cpu'
     with open(model_file, 'rb') as f:
         model = pickle.load(f)
@@ -29,7 +30,8 @@ def predict(entry):
         # score = processed_entry['Score']
         # helpfulness = processed_entry['Helpfulness']
 
-        vocab_file = Path(os.getcwd()).parent.parent/'models/vocab.pickle'
+        #vocab_file = Path(os.getcwd()).parent.parent/'models/vocab.pickle'
+        vocab_file = '/api/code/models/vocab.pickle'
         with open(vocab_file, 'rb') as f:
             vocab = pickle.load(f)
 
@@ -72,6 +74,6 @@ def predict(entry):
                 return idx2cat[predicted_class]
 
 # (Title,Helpfulness,Score,Text) -> Category
-sample_title = "Something"
-sample_text = "You can use other tools than suggested. You can also add another tools to the pipeline, but  the specified stages should be present in the pipeline.Any dataset and models could be used"
-print(predict(DataFrame({'Title': [sample_title], 'Helpfulness': ['0/0'], 'Score': [0], 'Text': [sample_text]})))
+# sample_title = "Something"
+# sample_text = "You can use other tools than suggested. You can also add another tools to the pipeline, but  the specified stages should be present in the pipeline.Any dataset and models could be used"
+# print(predict(DataFrame({'Title': [sample_title], 'Helpfulness': ['0/0'], 'Score': [0], 'Text': [sample_text]})))
