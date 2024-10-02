@@ -1,0 +1,192 @@
+[2024-10-02T22:20:51.642+0300] {executor_loader.py:254} INFO - Loaded executor: SequentialExecutor
+[2024-10-02T22:20:51.679+0300] {scheduler_job_runner.py:935} INFO - Starting the scheduler
+[2024-10-02T22:20:51.681+0300] {scheduler_job_runner.py:942} INFO - Processing each file at most -1 times
+[2024-10-02T22:20:51.687+0300] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 31010
+[2024-10-02T22:20:51.689+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T22:20:51.691+0300] {settings.py:63} INFO - Configured default timezone UTC
+[2024-10-02T22:20:51.721+0300] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2024-10-02T22:25:51.833+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T22:30:51.952+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T22:35:52.071+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T22:40:52.191+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T22:45:52.311+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T22:50:52.432+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T22:55:52.554+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:00:52.550+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:05:52.671+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:10:52.792+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:15:52.911+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:20:53.136+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:25:53.259+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:30:53.380+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:35:53.501+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:40:53.621+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:45:53.721+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:50:53.843+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-02T23:55:53.964+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:00:54.086+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:05:54.206+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:10:54.327+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:15:54.448+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:20:54.571+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:25:54.691+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:30:54.776+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:35:55.035+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:40:55.162+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:45:55.379+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:47:48.435+0300] {dag.py:4180} INFO - Setting next_dagrun for a1-dag to 2024-09-30 00:05:00+00:00, run_after=2024-09-30 00:10:00+00:00
+Dag run  in running state
+Dag information Queued at: 2024-10-02 21:47:48.392756+00:00 hash info: e3841379cd75d1f5de71611b64823f3a
+[2024-10-03T00:47:48.510+0300] {scheduler_job_runner.py:423} INFO - 1 tasks up for execution:
+	<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:00:00+00:00 [scheduled]>
+[2024-10-03T00:47:48.510+0300] {scheduler_job_runner.py:495} INFO - DAG a1-dag has 0/16 running and queued tasks
+[2024-10-03T00:47:48.511+0300] {scheduler_job_runner.py:634} INFO - Setting the following tasks to queued state:
+	<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:00:00+00:00 [scheduled]>
+[2024-10-03T00:47:48.513+0300] {scheduler_job_runner.py:736} INFO - Trying to enqueue tasks: [<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:00:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2024-10-03T00:47:48.517+0300] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='a1-dag', task_id='preprocess_data', run_id='scheduled__2024-09-30T00:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2024-10-03T00:47:48.517+0300] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'a1-dag', 'preprocess_data', 'scheduled__2024-09-30T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:47:48.524+0300] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'a1-dag', 'preprocess_data', 'scheduled__2024-09-30T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:47:49.765+0300] {dagbag.py:588} INFO - Filling up the DagBag from /home/hamsterhom220/MLOps/Assign1/services/airflow/dags/pipeline.py
+[2024-10-03T00:47:50.085+0300] {task_command.py:467} INFO - Running <TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:00:00+00:00 [queued]> on host HamsterHom220.
+[2024-10-03T00:47:52.238+0300] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='a1-dag', task_id='preprocess_data', run_id='scheduled__2024-09-30T00:00:00+00:00', try_number=1, map_index=-1)
+[2024-10-03T00:47:52.244+0300] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=a1-dag, task_id=preprocess_data, run_id=scheduled__2024-09-30T00:00:00+00:00, map_index=-1, run_start_date=2024-10-02 21:47:50.119371+00:00, run_end_date=2024-10-02 21:47:51.786827+00:00, run_duration=1.667456, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=3, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-10-02 21:47:48.512258+00:00, queued_by_job_id=1, pid=58936
+[2024-10-03T00:47:52.423+0300] {dag.py:4180} INFO - Setting next_dagrun for a1-dag to 2024-09-30 00:10:00+00:00, run_after=2024-09-30 00:15:00+00:00
+Dag run  in running state
+Dag information Queued at: 2024-10-02 21:47:52.419749+00:00 hash info: e3841379cd75d1f5de71611b64823f3a
+[2024-10-03T00:47:52.460+0300] {scheduler_job_runner.py:423} INFO - 2 tasks up for execution:
+	<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:05:00+00:00 [scheduled]>
+	<TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:00:00+00:00 [scheduled]>
+[2024-10-03T00:47:52.461+0300] {scheduler_job_runner.py:495} INFO - DAG a1-dag has 0/16 running and queued tasks
+[2024-10-03T00:47:52.461+0300] {scheduler_job_runner.py:495} INFO - DAG a1-dag has 1/16 running and queued tasks
+[2024-10-03T00:47:52.461+0300] {scheduler_job_runner.py:634} INFO - Setting the following tasks to queued state:
+	<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:05:00+00:00 [scheduled]>
+	<TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:00:00+00:00 [scheduled]>
+[2024-10-03T00:47:52.463+0300] {scheduler_job_runner.py:736} INFO - Trying to enqueue tasks: [<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:05:00+00:00 [scheduled]>, <TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:00:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2024-10-03T00:47:52.463+0300] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='a1-dag', task_id='preprocess_data', run_id='scheduled__2024-09-30T00:05:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2024-10-03T00:47:52.463+0300] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'a1-dag', 'preprocess_data', 'scheduled__2024-09-30T00:05:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:47:52.464+0300] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='a1-dag', task_id='train_model', run_id='scheduled__2024-09-30T00:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2024-10-03T00:47:52.464+0300] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-09-30T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:47:52.470+0300] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'a1-dag', 'preprocess_data', 'scheduled__2024-09-30T00:05:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:47:53.926+0300] {dagbag.py:588} INFO - Filling up the DagBag from /home/hamsterhom220/MLOps/Assign1/services/airflow/dags/pipeline.py
+[2024-10-03T00:47:54.294+0300] {task_command.py:467} INFO - Running <TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:05:00+00:00 [queued]> on host HamsterHom220.
+[2024-10-03T00:47:56.328+0300] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-09-30T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:47:57.585+0300] {dagbag.py:588} INFO - Filling up the DagBag from /home/hamsterhom220/MLOps/Assign1/services/airflow/dags/pipeline.py
+[2024-10-03T00:47:57.926+0300] {task_command.py:467} INFO - Running <TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:00:00+00:00 [queued]> on host HamsterHom220.
+[2024-10-03T00:53:26.920+0300] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='a1-dag', task_id='preprocess_data', run_id='scheduled__2024-09-30T00:05:00+00:00', try_number=1, map_index=-1)
+[2024-10-03T00:53:26.921+0300] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='a1-dag', task_id='train_model', run_id='scheduled__2024-09-30T00:00:00+00:00', try_number=1, map_index=-1)
+[2024-10-03T00:53:26.929+0300] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=a1-dag, task_id=train_model, run_id=scheduled__2024-09-30T00:00:00+00:00, map_index=-1, run_start_date=2024-10-02 21:47:57.959581+00:00, run_end_date=2024-10-02 21:53:25.060005+00:00, run_duration=327.100424, state=failed, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=5, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-10-02 21:53:18.418460+00:00, queued_by_job_id=6, pid=59017
+[2024-10-03T00:53:26.930+0300] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=a1-dag, task_id=preprocess_data, run_id=scheduled__2024-09-30T00:05:00+00:00, map_index=-1, run_start_date=2024-10-02 21:47:54.332888+00:00, run_end_date=2024-10-02 21:47:55.910057+00:00, run_duration=1.577169, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=4, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-10-02 21:47:52.462324+00:00, queued_by_job_id=1, pid=58977
+[2024-10-03T00:53:26.944+0300] {manager.py:293} ERROR - DagFileProcessorManager (PID=31010) last sent a heartbeat 334.58 seconds ago! Restarting it
+[2024-10-03T00:53:26.963+0300] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 31010. PIDs of all processes in the group: [31010]
+[2024-10-03T00:53:26.964+0300] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 31010
+[2024-10-03T00:53:27.099+0300] {process_utils.py:80} INFO - Process psutil.Process(pid=31010, status='terminated', exitcode=0, started='22:20:51') (31010) terminated with exit code 0
+[2024-10-03T00:53:27.123+0300] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 59740
+[2024-10-03T00:53:27.156+0300] {job.py:229} INFO - Heartbeat recovered after 334.90 seconds
+[2024-10-03T00:53:27.183+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T00:53:27.183+0300] {settings.py:63} INFO - Configured default timezone UTC
+[2024-10-03T00:53:27.397+0300] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2024-10-03T00:53:27.700+0300] {dag.py:4180} INFO - Setting next_dagrun for a1-dag to 2024-09-30 00:20:00+00:00, run_after=2024-09-30 00:25:00+00:00
+Dag run  in running state
+Dag information Queued at: 2024-10-02 21:53:27.696955+00:00 hash info: e3841379cd75d1f5de71611b64823f3a
+[2024-10-03T00:53:27.758+0300] {scheduler_job_runner.py:423} INFO - 2 tasks up for execution:
+	<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:15:00+00:00 [scheduled]>
+	<TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:10:00+00:00 [scheduled]>
+[2024-10-03T00:53:27.758+0300] {scheduler_job_runner.py:495} INFO - DAG a1-dag has 1/16 running and queued tasks
+[2024-10-03T00:53:27.758+0300] {scheduler_job_runner.py:495} INFO - DAG a1-dag has 2/16 running and queued tasks
+[2024-10-03T00:53:27.759+0300] {scheduler_job_runner.py:634} INFO - Setting the following tasks to queued state:
+	<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:15:00+00:00 [scheduled]>
+	<TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:10:00+00:00 [scheduled]>
+[2024-10-03T00:53:27.760+0300] {scheduler_job_runner.py:736} INFO - Trying to enqueue tasks: [<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:15:00+00:00 [scheduled]>, <TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:10:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2024-10-03T00:53:27.760+0300] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='a1-dag', task_id='preprocess_data', run_id='scheduled__2024-09-30T00:15:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2024-10-03T00:53:27.761+0300] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'a1-dag', 'preprocess_data', 'scheduled__2024-09-30T00:15:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:53:27.761+0300] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='a1-dag', task_id='train_model', run_id='scheduled__2024-09-30T00:10:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2024-10-03T00:53:27.761+0300] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-09-30T00:10:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:53:27.767+0300] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'a1-dag', 'preprocess_data', 'scheduled__2024-09-30T00:15:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:53:29.380+0300] {dagbag.py:588} INFO - Filling up the DagBag from /home/hamsterhom220/MLOps/Assign1/services/airflow/dags/pipeline.py
+[2024-10-03T00:53:29.762+0300] {task_command.py:467} INFO - Running <TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:15:00+00:00 [queued]> on host HamsterHom220.
+[2024-10-03T00:53:32.114+0300] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-09-30T00:10:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T00:53:33.380+0300] {dagbag.py:588} INFO - Filling up the DagBag from /home/hamsterhom220/MLOps/Assign1/services/airflow/dags/pipeline.py
+[2024-10-03T00:53:33.719+0300] {task_command.py:467} INFO - Running <TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:10:00+00:00 [queued]> on host HamsterHom220.
+[2024-10-03T01:03:56.276+0300] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='a1-dag', task_id='preprocess_data', run_id='scheduled__2024-09-30T00:15:00+00:00', try_number=1, map_index=-1)
+[2024-10-03T01:03:56.280+0300] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='a1-dag', task_id='train_model', run_id='scheduled__2024-09-30T00:10:00+00:00', try_number=1, map_index=-1)
+[2024-10-03T01:03:56.299+0300] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=a1-dag, task_id=train_model, run_id=scheduled__2024-09-30T00:10:00+00:00, map_index=-1, run_start_date=2024-10-02 21:53:33.754161+00:00, run_end_date=2024-10-02 22:03:44.974185+00:00, run_duration=611.220024, state=failed, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=11, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-10-02 21:53:27.759578+00:00, queued_by_job_id=1, pid=59841
+[2024-10-03T01:03:56.301+0300] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=a1-dag, task_id=preprocess_data, run_id=scheduled__2024-09-30T00:15:00+00:00, map_index=-1, run_start_date=2024-10-02 21:53:29.801575+00:00, run_end_date=2024-10-02 21:53:31.615937+00:00, run_duration=1.814362, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=9, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-10-02 21:53:27.759578+00:00, queued_by_job_id=1, pid=59769
+[2024-10-03T01:03:56.313+0300] {manager.py:293} ERROR - DagFileProcessorManager (PID=59740) last sent a heartbeat 628.66 seconds ago! Restarting it
+[2024-10-03T01:03:56.316+0300] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 59740. PIDs of all processes in the group: [59740]
+[2024-10-03T01:03:56.316+0300] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 59740
+[2024-10-03T01:03:56.730+0300] {process_utils.py:80} INFO - Process psutil.Process(pid=59740, status='terminated', exitcode=0, started='00:53:26') (59740) terminated with exit code 0
+[2024-10-03T01:03:56.736+0300] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 60325
+[2024-10-03T01:03:56.746+0300] {settings.py:63} INFO - Configured default timezone UTC
+[2024-10-03T01:03:56.758+0300] {job.py:229} INFO - Heartbeat recovered after 629.62 seconds
+[2024-10-03T01:03:56.773+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T01:03:56.781+0300] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2024-10-03T01:07:59.125+0300] {dag.py:4180} INFO - Setting next_dagrun for a1-dag to 2024-10-01 00:20:00+00:00, run_after=2024-10-02 00:20:00+00:00
+Dag run  in running state
+Dag information Queued at: 2024-10-02 22:07:59.122418+00:00 hash info: 04d1de00b1e139b5035003b65485f269
+[2024-10-03T01:07:59.160+0300] {scheduler_job_runner.py:423} INFO - 1 tasks up for execution:
+	<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:20:00+00:00 [scheduled]>
+[2024-10-03T01:07:59.160+0300] {scheduler_job_runner.py:495} INFO - DAG a1-dag has 0/16 running and queued tasks
+[2024-10-03T01:07:59.161+0300] {scheduler_job_runner.py:634} INFO - Setting the following tasks to queued state:
+	<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:20:00+00:00 [scheduled]>
+[2024-10-03T01:07:59.162+0300] {scheduler_job_runner.py:736} INFO - Trying to enqueue tasks: [<TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:20:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2024-10-03T01:07:59.162+0300] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='a1-dag', task_id='preprocess_data', run_id='scheduled__2024-09-30T00:20:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2024-10-03T01:07:59.162+0300] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'a1-dag', 'preprocess_data', 'scheduled__2024-09-30T00:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T01:07:59.167+0300] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'a1-dag', 'preprocess_data', 'scheduled__2024-09-30T00:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T01:08:00.563+0300] {dagbag.py:588} INFO - Filling up the DagBag from /home/hamsterhom220/MLOps/Assign1/services/airflow/dags/pipeline.py
+[2024-10-03T01:08:00.984+0300] {task_command.py:467} INFO - Running <TaskInstance: a1-dag.preprocess_data scheduled__2024-09-30T00:20:00+00:00 [queued]> on host HamsterHom220.
+[2024-10-03T01:08:03.871+0300] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='a1-dag', task_id='preprocess_data', run_id='scheduled__2024-09-30T00:20:00+00:00', try_number=1, map_index=-1)
+[2024-10-03T01:08:03.875+0300] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=a1-dag, task_id=preprocess_data, run_id=scheduled__2024-09-30T00:20:00+00:00, map_index=-1, run_start_date=2024-10-02 22:08:01.018508+00:00, run_end_date=2024-10-02 22:08:03.386901+00:00, run_duration=2.368393, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=0, job_id=12, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-10-02 22:07:59.161468+00:00, queued_by_job_id=1, pid=61902
+[2024-10-03T01:08:04.037+0300] {scheduler_job_runner.py:423} INFO - 2 tasks up for execution:
+	<TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:20:00+00:00 [scheduled]>
+	<TaskInstance: a1-dag.train_model scheduled__2024-10-01T00:20:00+00:00 [scheduled]>
+[2024-10-03T01:08:04.037+0300] {scheduler_job_runner.py:495} INFO - DAG a1-dag has 0/16 running and queued tasks
+[2024-10-03T01:08:04.038+0300] {scheduler_job_runner.py:495} INFO - DAG a1-dag has 1/16 running and queued tasks
+[2024-10-03T01:08:04.038+0300] {scheduler_job_runner.py:634} INFO - Setting the following tasks to queued state:
+	<TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:20:00+00:00 [scheduled]>
+	<TaskInstance: a1-dag.train_model scheduled__2024-10-01T00:20:00+00:00 [scheduled]>
+[2024-10-03T01:08:04.039+0300] {scheduler_job_runner.py:736} INFO - Trying to enqueue tasks: [<TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:20:00+00:00 [scheduled]>, <TaskInstance: a1-dag.train_model scheduled__2024-10-01T00:20:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2024-10-03T01:08:04.039+0300] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='a1-dag', task_id='train_model', run_id='scheduled__2024-09-30T00:20:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2024-10-03T01:08:04.040+0300] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-09-30T00:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T01:08:04.040+0300] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='a1-dag', task_id='train_model', run_id='scheduled__2024-10-01T00:20:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2024-10-03T01:08:04.040+0300] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-10-01T00:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T01:08:04.046+0300] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-09-30T00:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T01:08:05.374+0300] {dagbag.py:588} INFO - Filling up the DagBag from /home/hamsterhom220/MLOps/Assign1/services/airflow/dags/pipeline.py
+[2024-10-03T01:08:05.720+0300] {task_command.py:467} INFO - Running <TaskInstance: a1-dag.train_model scheduled__2024-09-30T00:20:00+00:00 [queued]> on host HamsterHom220.
+[2024-10-03T01:08:52.967+0300] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-10-01T00:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T01:08:54.548+0300] {dagbag.py:588} INFO - Filling up the DagBag from /home/hamsterhom220/MLOps/Assign1/services/airflow/dags/pipeline.py
+[2024-10-03T01:08:54.891+0300] {task_command.py:467} INFO - Running <TaskInstance: a1-dag.train_model scheduled__2024-10-01T00:20:00+00:00 [running]> on host HamsterHom220.
+[2024-10-03T01:08:55.319+0300] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='a1-dag', task_id='train_model', run_id='scheduled__2024-09-30T00:20:00+00:00', try_number=1, map_index=-1)
+[2024-10-03T01:08:55.319+0300] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='a1-dag', task_id='train_model', run_id='scheduled__2024-10-01T00:20:00+00:00', try_number=1, map_index=-1)
+[2024-10-03T01:08:55.325+0300] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=a1-dag, task_id=train_model, run_id=scheduled__2024-09-30T00:20:00+00:00, map_index=-1, run_start_date=2024-10-02 22:08:05.753235+00:00, run_end_date=2024-10-02 22:08:48.052278+00:00, run_duration=42.299043, state=failed, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=0, job_id=14, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-10-02 22:08:46.358883+00:00, queued_by_job_id=6, pid=61972
+[2024-10-03T01:08:55.326+0300] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=a1-dag, task_id=train_model, run_id=scheduled__2024-10-01T00:20:00+00:00, map_index=-1, run_start_date=2024-10-02 22:08:53.263462+00:00, run_end_date=None, run_duration=None, state=running, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=0, job_id=16, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-10-02 22:08:46.358883+00:00, queued_by_job_id=6, pid=62421
+[2024-10-03T01:08:55.337+0300] {manager.py:293} ERROR - DagFileProcessorManager (PID=60325) last sent a heartbeat 51.33 seconds ago! Restarting it
+[2024-10-03T01:08:55.339+0300] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 60325. PIDs of all processes in the group: [60325]
+[2024-10-03T01:08:55.339+0300] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 60325
+[2024-10-03T01:08:55.471+0300] {process_utils.py:80} INFO - Process psutil.Process(pid=60325, status='terminated', exitcode=0, started='01:03:56') (60325) terminated with exit code 0
+[2024-10-03T01:08:55.476+0300] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 62461
+[2024-10-03T01:08:55.482+0300] {settings.py:63} INFO - Configured default timezone UTC
+[2024-10-03T01:08:55.495+0300] {job.py:229} INFO - Heartbeat recovered after 51.61 seconds
+[2024-10-03T01:08:55.507+0300] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2024-10-03T01:08:56.828+0300] {dagrun.py:823} ERROR - Marking run <DagRun a1-dag @ 2024-09-30 00:20:00+00:00: scheduled__2024-09-30T00:20:00+00:00, state:running, queued_at: 2024-10-02 22:07:59.122418+00:00. externally triggered: False> failed
+Dag run  in failure state
+Dag information:a1-dag Run id: scheduled__2024-09-30T00:20:00+00:00 external trigger: False
+Failed with message: task_failure
+[2024-10-03T01:08:56.829+0300] {dagrun.py:905} INFO - DagRun Finished: dag_id=a1-dag, execution_date=2024-09-30 00:20:00+00:00, run_id=scheduled__2024-09-30T00:20:00+00:00, run_start_date=2024-10-02 22:07:59.135229+00:00, run_end_date=2024-10-02 22:08:56.829268+00:00, run_duration=57.694039, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2024-09-30 00:20:00+00:00, data_interval_end=2024-10-01 00:20:00+00:00, dag_hash=04d1de00b1e139b5035003b65485f269
+[2024-10-03T01:08:56.832+0300] {dag.py:4180} INFO - Setting next_dagrun for a1-dag to 2024-10-01 00:20:00+00:00, run_after=2024-10-02 00:20:00+00:00
+[2024-10-03T01:08:56.857+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T01:08:57.421+0300] {dag.py:4180} INFO - Setting next_dagrun for a1-dag to 2024-10-02 00:20:00+00:00, run_after=2024-10-03 00:20:00+00:00
+[2024-10-03T01:13:57.166+0300] {scheduler_job_runner.py:1847} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2024-10-03T01:13:57.171+0300] {scheduler_job_runner.py:1870} INFO - Marked 1 SchedulerJob instances as failed
+[2024-10-03T01:13:57.180+0300] {scheduler_job_runner.py:1910} INFO - Reset the following 1 orphaned TaskInstances:
+	<TaskInstance: a1-dag.train_model scheduled__2024-10-01T00:20:00+00:00 [running]>
+[2024-10-03T01:13:57.926+0300] {scheduler_job_runner.py:423} INFO - 1 tasks up for execution:
+	<TaskInstance: a1-dag.train_model scheduled__2024-10-01T00:20:00+00:00 [scheduled]>
+[2024-10-03T01:13:57.928+0300] {scheduler_job_runner.py:495} INFO - DAG a1-dag has 0/16 running and queued tasks
+[2024-10-03T01:13:57.930+0300] {scheduler_job_runner.py:634} INFO - Setting the following tasks to queued state:
+	<TaskInstance: a1-dag.train_model scheduled__2024-10-01T00:20:00+00:00 [scheduled]>
+[2024-10-03T01:13:57.932+0300] {scheduler_job_runner.py:736} INFO - Trying to enqueue tasks: [<TaskInstance: a1-dag.train_model scheduled__2024-10-01T00:20:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2024-10-03T01:13:57.934+0300] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='a1-dag', task_id='train_model', run_id='scheduled__2024-10-01T00:20:00+00:00', try_number=3, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2024-10-03T01:13:57.935+0300] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-10-01T00:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T01:13:57.947+0300] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'a1-dag', 'train_model', 'scheduled__2024-10-01T00:20:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline.py']
+[2024-10-03T01:14:00.928+0300] {dagbag.py:588} INFO - Filling up the DagBag from /home/hamsterhom220/MLOps/Assign1/services/airflow/dags/pipeline.py
+[2024-10-03T01:14:01.705+0300] {task_command.py:467} INFO - Running <TaskInstance: a1-dag.train_model scheduled__2024-10-01T00:20:00+00:00 [queued]> on host HamsterHom220.

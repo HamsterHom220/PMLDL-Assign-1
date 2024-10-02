@@ -24,8 +24,7 @@ the resulting category is displayed as a string.
 Data loading, cleaning and splitting are performed by utility functions
 defined in /code/datasets. Later they are called in a /code/models/train.py.
 Also DVC is used to keep track of data versions.
-<br>
-<h2><i>#TODO wrap the opeartions into Airflow tasks</i></h2>
+
 
 <h1>Stage 2. Model engineering</h1>
 <h2>Input:</h2>
@@ -38,8 +37,6 @@ Also DVC is used to keep track of data versions.
 
 Model training, evaluation and packaging are performed by /code/models/train.py
 Also MLflow is used for logging.
-<br>
-<h2><i>#TODO wrap the opeartions into Airflow tasks</i></h2>
 
 <h1>Stage 3. Deployment</h1>
 <h2>Input:</h2>
@@ -54,5 +51,3 @@ API calls the function from /code/models/predict.py when it recieves
 a request GET/predict/?title={title}&text={text} from the Streamlit app.
 FastAPI and Streamlit apps are placed in separate containers that communicate
 according to the rules defined in /docker-compose.yaml
-<br>
-<h2><i>#TODO wrap the docker-compose into Airflow tasks</i></h2>

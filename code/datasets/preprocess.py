@@ -10,10 +10,19 @@ from sklearn.model_selection import train_test_split
 nltk.download('punkt_tab')
 nltk.download('stopwords')
 
-# cur_dir = Path(os.getcwd())
-#
-# train_dataframe = pd.read_csv(cur_dir.parent.parent.parent/'data/raw/train.csv')
-# test_dataframe = pd.read_csv(cur_dir.parent.parent.parent/'data/raw/test.csv')
+# define categories indices
+cat2idx = {
+    'toys games': 0,
+    'health personal care': 1,
+    'beauty': 2,
+    'baby products': 3,
+    'pet supplies': 4,
+    'grocery gourmet food': 5,
+}
+# define reverse mapping
+idx2cat = {
+    v:k for k,v in cat2idx.items()
+}
 
 def preprocess_score_inplace(df):
     """
@@ -24,7 +33,6 @@ def preprocess_score_inplace(df):
     """
     df['Score'] = (df['Score'] - 1.0) / 4.0
     return df
-
 
 def preprocess_helpfulness_inplace(df):
     """
@@ -44,7 +52,6 @@ def preprocess_helpfulness_inplace(df):
 
     return df
 
-
 def concat_title_text_inplace(df):
     """
     Concatenates Title and Text columns together
@@ -53,43 +60,20 @@ def concat_title_text_inplace(df):
     df.drop('Title', axis=1, inplace=True)
     return df
 
-
-# define categories indices
-cat2idx = {
-    'toys games': 0,
-    'health personal care': 1,
-    'beauty': 2,
-    'baby products': 3,
-    'pet supplies': 4,
-    'grocery gourmet food': 5,
-}
-# define reverse mapping
-idx2cat = {
-    v:k for k,v in cat2idx.items()
-}
-
 def encode_categories(df):
     df['Category'] = df['Category'].apply(lambda x: cat2idx[x])
     return df
 
-# train_copy = train_dataframe.head().copy()
-#
-# encode_categories(preprocess_score_inplace(preprocess_helpfulness_inplace(concat_title_text_inplace(train_copy))))
-
-
 def lower_text(text: str):
     return text.lower()
-
 
 def remove_numbers(text: str):
     text_nonum = re.sub(r'\d+', ' ', text)
     return text_nonum
 
-
 def remove_punctuation(text: str):
     text_nopunct = re.sub(r'\W+', ' ', text)
     return text_nopunct
-
 
 def remove_multiple_spaces(text: str):
     text_no_doublespace = re.sub(r'\s+', ' ', text)
@@ -106,24 +90,6 @@ def remove_stop_words(tokenized_text: list[str]) -> list[str]:
 def stem_words(tokenized_text: list[str]) -> list[str]:
     stemmer = PorterStemmer()
     return [stemmer.stem(word) for word in tokenized_text]
-
-# sample_text = train_copy['Text'][4]
-#
-# _lowered = lower_text(sample_text)
-# _without_numbers = remove_numbers(_lowered)
-# _without_punct = remove_punctuation(_without_numbers)
-# _single_spaced = remove_multiple_spaces(_without_punct)
-
-# print(sample_text)
-# print('-'*10)
-# print(_lowered)
-# print('-'*10)
-# print(_without_numbers)
-# print('-'*10)
-# print(_without_punct)
-# print('-'*10)
-# print(_single_spaced)
-
 
 def preprocessing_stage(text):
     _lowered = lower_text(text)
@@ -156,11 +122,34 @@ def preprocess(df):
     return _cleaned
 
 
-# ratio = 0.2
-# train, val = train_test_split(
-#     train_dataframe, stratify=train_dataframe['Category'], test_size=0.2, random_state=420
-# )
-#
-# train.to_csv(cur_dir.parent.parent.parent/'data/processed/train.csv', index=False)
-# val.to_csv(cur_dir.parent.parent.parent/'data/processed/val.csv', index=False)
-# test_dataframe.to_csv(cur_dir.parent.parent.parent/'data/processed/test.csv', index=False)
+if __name__ == '__main__':
+    train_dataframe = pd.read_csv('~/MLOps/Assign1/data/raw/train.csv')
+    test_dataframe = pd.read_csv('~/MLOps/Assign1/data/raw/test.csv')
+
+    train_copy = train_dataframe.head().copy()
+    encode_categories(preprocess_score_inplace(preprocess_helpfulness_inplace(concat_title_text_inplace(train_copy))))
+    sample_text = train_copy['Text'][4]
+
+    _lowered = lower_text(sample_text)
+    _without_numbers = remove_numbers(_lowered)
+    _without_punct = remove_punctuation(_without_numbers)
+    _single_spaced = remove_multiple_spaces(_without_punct)
+
+    # print(sample_text)
+    # print('-'*10)
+    # print(_lowered)
+    # print('-'*10)
+    # print(_without_numbers)
+    # print('-'*10)
+    # print(_without_punct)
+    # print('-'*10)
+    # print(_single_spaced)
+
+    ratio = 0.2
+    train, val = train_test_split(
+        train_dataframe, stratify=train_dataframe['Category'], test_size=0.2, random_state=420
+    )
+
+    train.to_csv('~/MLOps/Assign1/data/processed/train.csv', index=False)
+    val.to_csv('~/MLOps/Assign1/data/processed/val.csv', index=False)
+    test_dataframe.to_csv('~/MLOps/Assign1/data/processed/test.csv', index=False)

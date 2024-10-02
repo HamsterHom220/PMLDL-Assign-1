@@ -110,46 +110,47 @@ def val_one_epoch(
 
     return best_so_far
 
-with mlflow.start_run() as run:
-    device = 'cpu'
+if __name__ == "__main__":
+    with mlflow.start_run() as run:
+        device = 'cpu'
 
-    data_dir = Path(os.getcwd()).parent.parent / 'data/processed'
-    train_dataloader, val_dataloader = build_loaders(data_dir / 'train.csv', data_dir / 'val.csv')
+        data_dir = Path('~/MLOps/Assign1/data/processed')
+        train_dataloader, val_dataloader = build_loaders(data_dir / 'train.csv', data_dir / 'val.csv')
 
-    epochs = 1
-    lr = 0.01
-    model = TextClassificationModel(6, 40000).to(device)
-    optimizer = SGD(model.parameters(), lr=lr, momentum=0.9)
-    loss_fn = nn.CrossEntropyLoss()
-    mlflow.log_param("learning_rate", lr)
-    mlflow.log_param("epochs", epochs)
+        epochs = 1
+        lr = 0.01
+        model = TextClassificationModel(6, 40000).to(device)
+        optimizer = SGD(model.parameters(), lr=lr, momentum=0.9)
+        loss_fn = nn.CrossEntropyLoss()
+        mlflow.log_param("learning_rate", lr)
+        mlflow.log_param("epochs", epochs)
 
-    best = -float('inf')
-    for epoch in range(epochs):
-        train_one_epoch(model, train_dataloader, optimizer, loss_fn, epoch_num=epoch)
-        best = val_one_epoch(model, val_dataloader, loss_fn, epoch, best_so_far=best)
+        best = -float('inf')
+        for epoch in range(epochs):
+            train_one_epoch(model, train_dataloader, optimizer, loss_fn, epoch_num=epoch)
+            best = val_one_epoch(model, val_dataloader, loss_fn, epoch, best_so_far=best)
 
-    # Define input/output schema for logging
-    input_schema = Schema(
-        [
-            TensorSpec(np.dtype(np.int64), (128, 538), name='texts'),  # Input tensor shape: (batch_size, seq_length)
-            TensorSpec(np.dtype(np.int64), (128,), name='offsets')  # Target labels
-        ]
-    )
-    output_schema = Schema([TensorSpec(np.dtype(np.float32), (-1, 6))])  # Output shape: (batch_size, num_classes)
-    signature = ModelSignature(inputs=input_schema, outputs=output_schema)
+        # Define input/output schema for logging
+        input_schema = Schema(
+            [
+                TensorSpec(np.dtype(np.int64), (128, 538), name='texts'),  # Input tensor shape: (batch_size, seq_length)
+                TensorSpec(np.dtype(np.int64), (128,), name='offsets')  # Target labels
+            ]
+        )
+        output_schema = Schema([TensorSpec(np.dtype(np.float32), (-1, 6))])  # Output shape: (batch_size, num_classes)
+        signature = ModelSignature(inputs=input_schema, outputs=output_schema)
 
-    # Log the best model to MLflow
-    ckpt = torch.load("best.pt")
-    model.load_state_dict(ckpt)
+        # Log the best model to MLflow
+        ckpt = torch.load("best.pt")
+        model.load_state_dict(ckpt)
 
-    model_file = Path(os.getcwd()).parent.parent/'models/trained_model.pickle'
-    with open(model_file, 'wb') as f:
-        pickle.dump(model, f)
+        model_file = '~/MLOps/Assign1/models/trained_model.pickle'
+        with open(model_file, 'wb') as f:
+            pickle.dump(model, f)
 
-    mlflow.pytorch.log_model(
-        pytorch_model=model,
-        signature=signature,
-        registered_model_name="1",
-        artifact_path="model-1"
-    )
+        mlflow.pytorch.log_model(
+            pytorch_model=model,
+            signature=signature,
+            registered_model_name="1",
+            artifact_path="model-1"
+        )

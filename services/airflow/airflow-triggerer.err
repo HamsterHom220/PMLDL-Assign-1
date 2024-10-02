@@ -1,0 +1,5 @@
+[2024-10-02 22:21:47 +0300] [31474] [INFO] Starting gunicorn 23.0.0
+[2024-10-02 22:21:47 +0300] [31474] [INFO] Listening at: http://[::]:8794 (31474)
+[2024-10-02 22:21:47 +0300] [31474] [INFO] Using worker: sync
+[2024-10-02 22:21:47 +0300] [31475] [INFO] Booting worker with pid: 31475
+[2024-10-02 22:21:48 +0300] [31477] [INFO] Booting worker with pid: 31477
