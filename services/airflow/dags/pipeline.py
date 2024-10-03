@@ -17,7 +17,7 @@ default_args = {
     'email_on_retry': False,
     'retries': 0,
     'retry_delay': timedelta(minutes=5),
-    'catchup': False
+    'catchup': False,
     # 'queue': 'bash_queue',
     # 'pool': 'backfill',
     # 'priority_weight': 10,
@@ -25,7 +25,7 @@ default_args = {
     # 'wait_for_downstream': False,
     # 'dag': dag,
     # 'sla': timedelta(hours=2),
-    # 'execution_timeout': timedelta(seconds=300),
+    'execution_timeout': timedelta(days=1),
     # 'on_failure_callback': some_function,
     # 'on_success_callback': some_other_function,
     # 'on_retry_callback': another_function,
@@ -37,7 +37,7 @@ dag = DAG(
     'a1-dag',
     default_args=default_args,
     description='Assign1 DAG',
-    schedule_interval=timedelta(days=1),
+    schedule_interval=timedelta(hours=2),
 )
 
 t1 = BashOperator(
@@ -54,7 +54,7 @@ t2 = BashOperator(
 
 t3 = BashOperator(
     task_id='deploy_app',
-    bash_command='cd ~/MLOps/Assign1/ && docker-compose up',
+    bash_command='cd ~/MLOps/Assign1/ && docker compose up',
     dag=dag,
 )
 

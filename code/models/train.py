@@ -143,8 +143,8 @@ if __name__ == "__main__":
         # Log the best model to MLflow
         ckpt = torch.load("best.pt")
         model.load_state_dict(ckpt)
-
-        model_file = '~/MLOps/Assign1/models/trained_model.pickle'
+        model_file = '/home/hamsterhom220/MLOps/Assign1/models/trained_model.pickle'
+        print(os.path.exists(model_file))
         with open(model_file, 'wb') as f:
             pickle.dump(model, f)
 
